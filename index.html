@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Frank Wirzberger | empower-today GmbH</title>
+  <meta name="description" content="Frank Wirzberger – KI-Strategieberater bei empower-today GmbH. Hier findest du alle relevanten Links auf einen Blick.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px 20px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 180px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .profilbild {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .info {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .link-button {
+      display: block;
+      background-color: #ffffff;
+      border: 2px solid #0077b5;
+      color: #0077b5;
+      text-decoration: none;
+      margin: 12px 0;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+
+    .link-button:hover {
+      background-color: #0077b5;
+      color: #fff;
+      transform: scale(1.03);
+    }
+
+    .main-link {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0,119,181, 0.4); }
+      70% { box-shadow: 0 0 0 12px rgba(0,119,181, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0,119,181, 0); }
+    }
+
+    .socials {
+      margin-top: 24px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      font-size: 24px;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .socials a:hover {
+      transform: scale(1.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Firmenlogo -->
+    <img class="logo" src="https://storage.e.jimdo.com/cdn-cgi/image/quality=85,fit=scale-down,format=auto,trim=0;0;0;0,width=1024,height=668/image/42824875/932e985d-ade1-41c8-bd89-348558bf0ed6.png" alt="empower today GmbH Logo">
+    
+    <!-- Profilbild -->
+    <img class="profilbild" src="https://media.licdn.com/dms/image/v2/D4E03AQHsTcwyigvkKQ/profile-displayphoto-shrink_400_400/B4EZO8xlEwHAAg-/0/1734038934722?e=1752105600&v=beta&t=rrlc4U_wMO7yLr9t7E1Xt4YNzlQG09Wh3CM_TrEUsv0" alt="Frank Wirzberger Portrait">
+
+    <!-- Kompakte Visitenkarteninfos -->
+    <div class="info">
+      <div class="name">Frank Wirzberger</div>
+      <div>KI-Strategieberater</div>
+      <div>empower-today GmbH</div>
+      <div>97843 Neuhütten</div>
+      <div><a href="mailto:frank@empower-today.com">frank@empower-today.com</a></div>
+    </div>
+
+    <!-- Linktree Buttons -->
+    <a class="link-button main-link" href="https://www.globaltradingsoftware.com" target="_blank">🌐 Zur Webseite</a>
+    <a class="link-button" href="https://www.linkedin.com/in/frank-wirzberger-b83aa072/" target="_blank">💼 LinkedIn</a>
+    <a class="link-button" href="https://www.facebook.com/profile.php?id=100047660653545" target="_blank">📘 Facebook</a>
+    <a class="link-button" href="https://www.instagram.com/empowertodayfw/" target="_blank">📸 Instagram</a>
+    <a class="link-button" href="#" onclick="downloadVCard()">📇 vCard herunterladen</a>
+
+    <!-- Social Media Icons -->
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/frank-wirzberger-b83aa072/" target="_blank" aria-label="LinkedIn">💼</a>
+      <a href="https://www.facebook.com/profile.php?id=100047660653545" target="_blank" aria-label="Facebook">📘</a>
+      <a href="https://www.instagram.com/empowertodayfw/" target="_blank" aria-label="Instagram">📸</a>
+    </div>
+  </div>
+
+  <!-- vCard Script -->
+  <script>
+    function downloadVCard() {
+      const vcardData = `BEGIN:VCARD
+VERSION:3.0
+N:Wirzberger;Frank;;;
+FN:Frank Wirzberger
+ORG:empower-today GmbH
+TITLE:KI-Strategieberater
+EMAIL:frank@empower-today.com
+ADR;TYPE=work:;;Steingrundstr. 24;Neuhütten;;97843;Deutschland
+URL:https://www.linkedin.com/in/frank-wirzberger-b83aa072/
+END:VCARD`;
+
+      const blob = new Blob([vcardData], { type: 'text/vcard' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'frank_wirzberger.vcf';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
